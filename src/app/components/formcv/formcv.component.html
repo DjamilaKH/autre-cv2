@@ -1,0 +1,66 @@
+<form name="myForm" *ngIf="cv ||isAddCv" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nomComplet">Nom Complet:</label>
+      <input type="text" id="nomComplet" [(ngModel)]="cv.nomComplet" name="nomComplet">
+    </div>
+  
+    <div>
+      <label for="adresse">Adresse:</label>
+      <input type="text" id="adresse" [(ngModel)]="cv.adresse" name="adresse">
+    </div>
+  
+    <div>
+      <label for="telephone">Téléphone:</label>
+      <input type="number" id="telephone" [(ngModel)]="cv.telephone" name="telephone">
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="cv.email" name="email">
+    </div>
+  
+    <div>
+      <label for="liensGitLinkedIN">Liens Git/LinkedIn:</label>
+      <input type="text" id="liensGitLinkedIN" [(ngModel)]="cv.liensGitLinkedIN" name="liensGitLinkedIN">
+    </div>
+  
+    <div>
+      <label for="objectif">Objectif:</label>
+      <textarea id="objectif" [(ngModel)]="cv.objectif" name="objectif"></textarea>
+    </div>
+  
+    <div>
+      <label for="resume">Résumé:</label>
+      <textarea id="resume" [(ngModel)]="cv.resume" name="resume"></textarea>
+    </div>
+  
+    <div>
+      <label for="certification">Certification:</label>
+      <textarea id="certification" [(ngModel)]="cv.certification" name="certification"></textarea>
+    </div>
+  
+    <div>
+      <label for="experienceProf">Expérience Professionnelle:</label>
+      <textarea id="experienceProf" [(ngModel)]="cv.experienceProf" name="experienceProf"></textarea>
+    </div>
+  
+    <div>
+      <label for="lieuEducation">Lieu d'Éducation:</label>
+      <input type="text" id="lieuEducation" [(ngModel)]="cv.lieuEducation" name="lieuEducation">
+    </div>
+  
+    <div>
+      <label for="specialiteEtude">Spécialité d'Étude:</label>
+      <input type="text" id="specialiteEtude" [(ngModel)]="cv.specialiteEtude" name="specialiteEtude">
+    </div>
+  
+    <div>
+      <label for="centreInteret">Centres d'Intérêt:</label>
+      <input type="text" id="centreInteret" [(ngModel)]="cv.centreInteret" name="centreInteret">
+    </div>
+  
+    <div class="card-footer">
+      <button class="btn btn-primary" type="submit">Soumettre</button>
+    </div>
+  </form>
+  

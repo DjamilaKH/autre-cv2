@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Rechercher par nom complet" [(ngModel)]="searchTerm">
+        <div class="input-group-append">
+          <button class="btn btn-primary" (click)="searchCv()">Rechercher</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row">
+    <div *ngFor="let cv of Cv" class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ cv.nomComplet }}</h5>
+          <p class="card-text"><strong>Adresse:</strong> {{ cv.adresse }}</p>
+          <p class="card-text"><strong>Email:</strong> {{ cv.email }}</p>
+          <p class="card-text"><strong>Téléphone:</strong> {{ cv.telephone }}</p>
+          <p class="card-text"><strong>Liens Git/LinkedIn:</strong> {{ cv.liensGitLinkedIN }}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary" (click)="goToCv(cv)">Voir le CV</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button class="btn btn-primary rounded-fab" style="position: fixed; bottom: 25px; right: 25px;" [routerLink]="['/add/']">+
+    <i class="fas fa-plus"></i>
+  </button>
+  

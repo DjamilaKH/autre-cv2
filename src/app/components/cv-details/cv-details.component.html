@@ -1,0 +1,35 @@
+<div *ngIf="cv" class="container mt-4">
+    <h1>Détail cv  {{cv.id}}</h1>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header">
+            <h3>{{ cv.nomComplet }}</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Adresse:</strong> {{ cv.adresse }}</li>
+              <li class="list-group-item"><strong>Téléphone:</strong> {{cv.telephone }}</li>
+              <li class="list-group-item"><strong>Email:</strong> {{ cv.email }}</li>
+              <li class="list-group-item"><strong>Liens Git/LinkedIn:</strong> {{cv.liensGitLinkedIN }}</li>
+              <li class="list-group-item"><strong>Objectif:</strong> {{cv.objectif }}</li>
+              <li class="list-group-item"><strong>Résumé:</strong> {{cv.resume }}</li>
+              <li class="list-group-item"><strong>Certification:</strong> {{cv.certification }}</li>
+              <li class="list-group-item"><strong>Expérience Professionnelle:</strong> {{ cv.experienceProf }}</li>
+              <li class="list-group-item"><strong>Lieu d'Éducation:</strong> {{ cv.lieuEducation }}</li>
+              <li class="list-group-item"><strong>Spécialité d'Étude:</strong> {{ cv.specialiteEtude }}</li>
+              <li class="list-group-item"><strong>Centre d'Intérêt:</strong> {{ cv.centreInteret }}</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <!-- Bouton Editer CV -->
+            <button class="btn btn-primary" (click)="editCv()" >Éditer CV</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- Bouton Supprimer CV -->
+            <button class="btn btn-danger" (click)="deleteCv()">Supprimer CV</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
